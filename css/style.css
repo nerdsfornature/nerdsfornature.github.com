@@ -129,6 +129,10 @@ body {
   margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
 }
 
+.featurette-noimage {
+  padding-top: 80px; /* less padding for featurette use with no pics */
+}
+
 /* Give some space on the sides of the floated elements so text doesn't run right into it. */
 .featurette-image.pull-left {
   margin-right: 40px;
@@ -145,7 +149,11 @@ body {
   letter-spacing: -1px;
 }
 
-
+/* bio styles */
+.biopic {
+  float: left;
+  margin-right: 10px;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
