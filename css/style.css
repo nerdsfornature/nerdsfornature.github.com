@@ -236,3 +236,11 @@ body {
   }
 
 }
+.carouselLogo{
+  float:right;
+  position:absolute;
+  z-index: 100;
+  top:100px;
+  right:10%;
+  width:20%;
+}
