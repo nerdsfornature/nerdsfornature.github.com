@@ -8,6 +8,11 @@
     	wrap.load(href + ' .container-fluid');
     	e.preventDefault();
     });
+
+    $('.img-circle').popover({
+      placement: 'bottom',
+      trigger: 'hover'
+    });
  
 
   })

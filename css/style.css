@@ -44,19 +44,19 @@ body {
 
 .route {
   position: absolute;
-  top:10px;
-  left: 275px;
+  top:0px;
+  left: 300px;
   display: inline-block;
-  width: 125px;
-  height: 125px;
+  width: 144px;
+  height: 144px;
 
   background-color: black;
   text-align: center;
   border: none;
 
-  -webkit-border-radius: 91px;
-  -moz-border-radius: 91px;
-  border-radius: 91px;
+  -webkit-border-radius: 110px;
+  -moz-border-radius: 110px;
+  border-radius: 110px;
   
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -70,7 +70,7 @@ body {
 }
 
 .route-text {
-  top:22px;
+  top:30px;
   font-family: "Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   display: block;
@@ -186,9 +186,8 @@ ul.nav>li>a {
   }
 
   .route {
-    left: 70px;
+    left: 65px;
   }
-
   
 }
 
@@ -207,6 +206,6 @@ ul.nav>li>a {
   }
 
   .route {
-    left: 40px;
+    left: 130px;
   }
 }
