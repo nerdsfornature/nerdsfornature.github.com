@@ -184,6 +184,11 @@ ul.nav>li>a {
   .navbar-inner {
     border-radius: 0;
   }
+
+  .route {
+    left: 70px;
+  }
+
   
 }
 
@@ -199,5 +204,9 @@ ul.nav>li>a {
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .route {
+    left: 40px;
   }
 }
