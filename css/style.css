@@ -34,6 +34,10 @@ body {
   background-color: black;
 }
 
+/*#wrap > div.current {
+  display: block; 
+}*/
+
 .container {
   width: auto;
   max-width: 840px;
@@ -115,9 +119,9 @@ body {
   margin-top: 100px;
 }
 
-#section2 {
+/*#section2 {
   margin-top: 200px;
-}
+}*/
 
 
 

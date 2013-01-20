@@ -43,7 +43,7 @@
 
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="index.html">Home</a></li>
               <li><a href="weare.html">We Are</a></li>
               <li><a href="about.html">About</a></li>
               <!-- <li><a href="#contact">Contact</a></li>
@@ -65,14 +65,15 @@
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
 
-    <div id="ball1" class="route"><a href="#"><h3 class="route-text">NERDS<br>FOR<br>NATURE</h3></a></div>
+    <a href="index.html"><div id="ball1" class="route"><h3 class="route-text">NERDS<br>FOR<br>NATURE</h3></div></a>
     
     <!-- Content Area -->
     <!-- ================================================== -->   
     <div id="wrap">
       
-      <div class="load-wrap">
-
+      <!-- home page -->
+      <div id="home" class="load-wrap current">
+        <!-- {{> header}} -->
         <section>
           <div class="container-fluid">
             <div class="row-fluid">
@@ -91,10 +92,6 @@
             </div>
           </div>
         </section>
-        
-        
-        <!-- End Marketing -->
-        <!-- ================================================== -->   
         
         <section>
           <div class="marketing container-fluid">
@@ -121,20 +118,13 @@
             </div> <!-- .row-fluid -->
           </div> <!-- .container-fluid --> 
         </section>
-        <!-- End Marketing -->
 
-      </div> <!-- .load-wrap -->
+      </div> <!-- .load-wrap --> 
+      <!-- end home page -->
     
       <div id="push"></div>
 
     </div> <!-- #wrap -->
-    
-    <!-- FOOTER -->
-    <!-- <footer>
-      <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2012 Nerds for Nature. &middot; Twitter: <a href="http://twitter.com/nerds4nature">@nerds4nature</a></p>
-    </footer> -->
-
 
     <div id="footer">
       <div class="container">
@@ -150,9 +140,9 @@
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+    <!-- <script src="js/handlebars.js"></script> -->
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
 
   </body>
 </html>
-
