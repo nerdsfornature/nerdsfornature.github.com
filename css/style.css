@@ -123,6 +123,10 @@ body {
   margin-top: 200px;
 }*/
 
+.popover {
+  width: 400px;
+  text-align: left;
+}
 
 
 /* CUSTOMIZE THE NAVBAR
@@ -192,6 +196,10 @@ ul.nav>li>a {
   .route {
     left: 65px;
   }
+
+  .popover {
+    width: 236px;
+  }
   
 }
 
@@ -211,5 +219,9 @@ ul.nav>li>a {
 
   .route {
     left: 130px;
+  }
+
+  .popover {
+    width: 236px;
   }
 }
