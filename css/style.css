@@ -92,8 +92,8 @@ body {
   text-decoration: none;
 }
 
-.route a:hover h3{
-  color: rgba(248, 208, 106, 1);
+h3.route-text:hover {
+  color: rgba(57, 150, 69, 1);
 }
 
 #hero-image-wrap {
@@ -203,11 +203,6 @@ ul.nav>li>a {
   
 }
 
-
-@media (max-width: 767px) {
-
-}
-
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
   #footer {
@@ -218,7 +213,7 @@ ul.nav>li>a {
   }
 
   .route {
-    left: 130px;
+    left: 110px;
   }
 
   .popover {
