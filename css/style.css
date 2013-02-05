@@ -171,13 +171,13 @@ ul.nav>li>a {
   margin-right: 10px;
 }
 
-.carouselLogo{
-  float:right;
-  position:absolute;
+.leaf-logo{
+  float: left;
+  position: absolute;
   z-index: 100;
-  top:250px;
-  right:30%;
-  width:20%;
+  top: 265px;
+  left: 40%;
+  width: 10%;
 }
 
 /* RESPONSIVE CSS
@@ -218,5 +218,9 @@ ul.nav>li>a {
 
   .popover {
     width: 236px;
+  }
+
+  .leaf-logo {
+    display: none;
   }
 }
