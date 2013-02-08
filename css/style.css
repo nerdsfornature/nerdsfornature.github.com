@@ -170,14 +170,14 @@ ul.nav>li>a {
   float: left;
   margin-right: 10px;
 }
-
-.leaf-logo{
-  float: left;
-  position: absolute;
-  z-index: 100;
-  top: 265px;
-  left: 40%;
-  width: 10%;
+#logo-wrap{
+  float: right;
+  margin: -140px -40px 0 2px;
+  max-width: 140px;
+  width:40%;
+}
+.leaf-logo {
+  
 }
 
 /* RESPONSIVE CSS
@@ -213,7 +213,7 @@ ul.nav>li>a {
   }
 
   .route {
-    left: 110px;
+    left: 50px;
   }
 
   .popover {
@@ -221,6 +221,6 @@ ul.nav>li>a {
   }
 
   .leaf-logo {
-    display: none;
+   /* display: none;*/
   }
 }
