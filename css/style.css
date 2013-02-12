@@ -106,6 +106,7 @@ h3.route-text:hover {
 
 #hero-title {
   font-family: "Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
 }
 
 #about-wrap {
@@ -172,12 +173,9 @@ ul.nav>li>a {
 }
 
 .leaf-logo{
-  float: left;
-  position: absolute;
-  z-index: 100;
-  top: 265px;
-  left: 40%;
-  width: 10%;
+  height: 50px;
+  display: inline-block;
+  padding: 0 15px 18px 0;
 }
 
 /* RESPONSIVE CSS
@@ -199,6 +197,10 @@ ul.nav>li>a {
 
   .popover {
     width: 236px;
+  }
+
+  .leaf-logo {
+    display: none;
   }
   
 }
