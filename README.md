@@ -1,7 +1,7 @@
 nerdsfornature.github.com
 =========================
 
-nerdsfornature.org
+[nerdsfornature.org](http://nerdsfornature.org/)
 
 Tutorial to set up this site:
 
