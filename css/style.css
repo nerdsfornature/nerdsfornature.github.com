@@ -53,6 +53,7 @@ body {
   display: inline-block;
   width: 144px;
   height: 144px;
+  z-index: 1;
 
   background-color: black;
   text-align: center;
@@ -147,6 +148,23 @@ ul.nav>li>a {
   font-size: 18px;
 }
 
+.carousel-inner {
+  overflow: auto;
+  margin-top: 75px;
+}
+
+.carousel-control {
+  top: 50%;
+}
+
+.carousel img {
+  min-width: 870px;
+  min-height: 500px;
+}
+
+.carousel .item > img {
+  margin: 0 auto;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

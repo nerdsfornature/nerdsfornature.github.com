@@ -9,6 +9,11 @@
    //  	e.preventDefault();
    //  });
 
+    // carousel
+    // $('#myCarousel').carousel()
+
+    $('.carousel').carousel()
+
     $('img.img-circle').popover({
       placement: 'bottom',
       trigger: 'hover'
