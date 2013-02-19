@@ -10,9 +10,10 @@
    //  });
 
     // carousel
-    // $('#myCarousel').carousel()
-
-    $('.carousel').carousel()
+    $('.carousel').carousel({
+      interval: 4000,
+      pause: "hover"
+    })
 
     $('img.img-circle').popover({
       placement: 'bottom',

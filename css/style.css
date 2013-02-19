@@ -148,22 +148,28 @@ ul.nav>li>a {
   font-size: 18px;
 }
 
+
+#myCarousel {
+  display: block;
+  width: 870px;
+  height: 500px;
+  margin: 60px auto;
+}
+
 .carousel-inner {
   overflow: auto;
-  margin-top: 75px;
 }
 
 .carousel-control {
-  top: 50%;
+  top: 45%;
 }
 
 .carousel img {
-  min-width: 870px;
-  min-height: 500px;
+
 }
 
 .carousel .item > img {
-  margin: 0 auto;
+
 }
 
 /* MARKETING CONTENT
