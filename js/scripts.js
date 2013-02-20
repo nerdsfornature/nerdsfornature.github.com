@@ -11,7 +11,7 @@
 
     // carousel
     $('.carousel').carousel({
-      interval: 15000,
+      interval: false,
       pause: "hover"
     })
 
