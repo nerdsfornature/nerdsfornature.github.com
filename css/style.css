@@ -42,6 +42,7 @@ body {
   width: auto;
   max-width: 840px;
 }
+
 .container .credit {
   margin: 20px 0;
 }
@@ -195,8 +196,8 @@ ul.nav>li>a {
   padding: 0 15px 18px 0;
 }
 
-#marketing-custom {
-  margin-top: 90px;
+.marketing-custom {
+  margin: 90px 0 100px;
 }
 
 /* RESPONSIVE CSS
