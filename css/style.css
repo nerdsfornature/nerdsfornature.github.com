@@ -131,6 +131,10 @@ h3.route-text:hover {
   text-align: left;
 }
 
+.inline {
+  display: inline-block;
+}
+
 #launch-reflection {
   padding-top: 30px;
 }
