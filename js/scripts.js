@@ -20,7 +20,21 @@
       trigger: 'hover'
     });
 
+    $('a.trigger').popover({ 
+      html : true,
+      trigger: 'hover',
+      placement: 'bottom',
+      offset: '50px',
+      title: function() {
+        return $(this).parent().find('.head').html();
+      },
+      content: function() {
+        return $(this).parent().find('.content').html();
+      }
+    });
+
   }
+
   $(document).ready(load_ui);
 
 }(window.jQuery)
