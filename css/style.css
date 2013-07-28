@@ -285,3 +285,11 @@ ul.nav>li>a {
     display: none;
   }
 }
+
+@media (min-width: 1200px){
+  
+  .thumbnails>li {
+    margin-left: 15px !important;
+  }
+
+}
