@@ -119,12 +119,18 @@ h3.route-text:hover {
 
 #weare-wrap {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
-/*#section2 {
-  margin-top: 200px;
-}*/
+.title-wrap {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: inline-block;
+}
+
+#contributors {
+  margin-top: 50px;
+}
 
 .popover {
   width: 400px;
