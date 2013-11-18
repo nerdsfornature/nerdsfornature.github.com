@@ -98,12 +98,8 @@ h3.route-text:hover {
   color: rgba(57, 150, 69, 1);
 }
 
-#hero-image-wrap {
-  margin-top: 10px;
-}
-
 #hero-text-wrap {
-  margin-top: 150px;
+  margin-top: 115px;
 }
 
 #hero-title {
@@ -163,21 +159,43 @@ ul.nav>li>a {
 }
 
 
-#myCarousel {
+#myCarousel1 {
   display: block;
   width: 870px;
   height: 500px;
   margin: 0px auto;
 }
 
+#myCarousel2 {
+  display: block;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+#hero-carousel {
+  height: 450px;
+}
+
+#hero-carousel>.item>img {
+  margin: 0 auto;
+} 
+
 .carousel-inner {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .carousel-control {
-  top: 55%;
+  top: 50%;
 }
 
+.carousel-caption {
+  margin: 0 auto;
+  top: 340px;
+  max-width: 415px;
+  bottom: initial;
+  background: rgba(0, 0, 0, 0.35);
+}
 
 /* POPUP STYLING
 -------------------------------------------------- */
@@ -240,7 +258,7 @@ ul.nav>li>a {
 }
 
 .marketing-custom {
-  margin: 90px 0 100px;
+  margin: 35px 0 100px;
 }
 
 /* RESPONSIVE CSS
