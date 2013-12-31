@@ -143,7 +143,7 @@ $(function() {
                 break
             }
             flickrPhotos.push({
-              taken: Date.parse(photo.datetaken),
+              taken: Date.parse(photo.datetaken.replace(/-/g, '/')),
               src: photo.url_l,
               url: 'http://flickr.com/photos/'+photo.owner+'/'+photo.id,
               width: photo.width_l,
