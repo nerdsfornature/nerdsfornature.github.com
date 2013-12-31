@@ -107,7 +107,7 @@ h3.route-text:hover {
   display: inline-block;
 }
 
-#about-wrap {
+.content-wrap {
   margin-top: 100px;
   width: auto;
   max-width: 840px;
@@ -145,15 +145,13 @@ h3.route-text:hover {
 -------------------------------------------------- */
 
 /* Navbar links: increase padding for taller navbar */
-.navbar .nav > li > a {
-  padding: 15px 20px;
-}
+.navbar-static-top .nav > li > a { padding: 15px 20px; }
 
-.navbar .nav {
+.navbar-static-top .nav {
   float: right;
 }
 
-ul.nav>li>a {
+.navbar-static-top ul.nav>li>a {
   line-height: 40px;
   font-size: 18px;
 }
