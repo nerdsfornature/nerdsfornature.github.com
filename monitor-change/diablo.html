@@ -96,6 +96,17 @@
           opacity: .5; 
           filter: alpha(opacity=50);
       }
+      .cycle-pager {
+        word-wrap: break-word;
+        text-align: center;
+      }
+      .cycle-pager .item {
+        background-color: #ccc;
+        margin-left: 2px;
+      }
+      .cycle-pager .item:first-child {margin-left:0;}
+      .cycle-pager .item:hover { background-color: black; }
+      .cycle-pager .item.cycle-pager-active { background-color: #666; }
     </style>
 
     <!-- Fav and touch icons -->

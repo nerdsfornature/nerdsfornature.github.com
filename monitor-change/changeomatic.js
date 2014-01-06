@@ -19,7 +19,9 @@ $(function() {
         $(elt).append('<div class="photos"></div>')
         var prev = $('<div class="cycle-prev prev">&lsaquo;</div>')
         var next = $('<div class="cycle-next next">&rsaquo;</div>')
+        var pager = $('<div class="cycle-pager"></div>').attr('id', 'cycle-pager-'+(new Date()).getTime())
         $('.photos', this).append(next, prev)
+        $(this).after(pager)
 
         var captionId = $(this).parents('.tab-pane').attr('id') + '-caption'
         var caption = $('<div class="caption"><div class="bg"></div><div id="'+captionId+'" class="cycle-caption"></div></div>')
@@ -32,9 +34,11 @@ $(function() {
           autoHeight: '1618:1000',
           caption: '#'+captionId,
           captionTemplate: "{{title}} by {{owner}} ({{license}}) on <a href='{{url}}'>{{provider}}</a> <span class='pull-right'>{{date}} <span class='muted'>({{slideNum}}/{{slideCount}})</span></span>",
-          pauseOnHover: true
+          pauseOnHover: true,
+          pager: '#'+pager.attr('id'),
+          pagerTemplate: "<a class='item' href=#>&nbsp;</a>"
         })
-        
+
         if (options.tag) {
           $(elt).changeomatic('tag', options.tag)
         }
@@ -80,7 +84,7 @@ $(function() {
         var img = $('<img />').attr('src', photo.src).data({
           title: photo.title || 'unknown',
           owner: photo.owner || 'unknown',
-          license: photo.license || "All rights reserved",
+          license: photo.license || "all rights reserved",
           provider: photo.provider || 'unknown',
           url: photo.url,
           date: $.format.date(photo.taken, "MMM d, yyyy")
@@ -116,7 +120,7 @@ $(function() {
             var license
             switch (photo.license) {
               case "0":
-                license = "All Rights Reserved"
+                license = "all rights reserved"
                 break
               case "1":
                 license = "CC BY-NC-SA"
@@ -143,8 +147,11 @@ $(function() {
                 license = "United States Government Work"
                 break
             }
+            if (!photo.datetaken) {
+              return
+            }
             flickrPhotos.push({
-              taken: Date.parse(photo.datetaken.replace(/-/g, '/')),
+              taken: $.format.parseDate(photo.datetaken).date,
               src: photo.url_l,
               url: 'http://flickr.com/photos/'+photo.owner+'/'+photo.id,
               width: photo.width_l,
@@ -196,7 +203,7 @@ $(function() {
               title: photo.caption ? photo.caption.text : 'Untitled',
               owner: photo.user.full_name + ' ('+photo.user.username+')',
               provider: 'Instagram',
-              license: "All Rights Reserved",
+              license: "all rights reserved",
               object: photo
             })
           })
