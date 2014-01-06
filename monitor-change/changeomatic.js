@@ -5,7 +5,8 @@ $(function() {
     } else {
       options = e || {}
     }
-    elt = this[0]
+    var elt = this[0],
+        that = this
     switch (e) {
       case 'tag':
         // change the tag & reset
@@ -30,10 +31,10 @@ $(function() {
           centerVert: true,
           autoHeight: '1618:1000',
           caption: '#'+captionId,
-          captionTemplate: "{{title}} by {{owner}} ({{license}}) on <a href='{{url}}'>{{provider}}</a> <span class='pull-right'>{{date}} <span class='muted'>({{slideNum}}/{{slideCount}})</span></span>"
+          captionTemplate: "{{title}} by {{owner}} ({{license}}) on <a href='{{url}}'>{{provider}}</a> <span class='pull-right'>{{date}} <span class='muted'>({{slideNum}}/{{slideCount}})</span></span>",
+          pauseOnHover: true
         })
-
-
+        
         if (options.tag) {
           $(elt).changeomatic('tag', options.tag)
         }
@@ -60,9 +61,9 @@ $(function() {
       var tag = $(elt).data('tag')
       if (!tag || tag.length == 0) { return }
       loadingNotice('Loading data...')
-      loadFlickr(tag)
-      // loadTwitter()
-      // loadInstagram()
+      loadFlickr(tag, {next: loadInstagram})
+      // Note: twitter just isnt' going to work in the browser without some server-side proxy:
+      // http://stackoverflow.com/questions/17004070/making-jquery-ajax-call-to-twitter-api-1-1-search
     }
 
     function finishedLoad() {
@@ -160,13 +161,57 @@ $(function() {
             loadFlickr(tag, {page: page + 1});
           } else {
             if (options.next) {
-              options.next.call(tag, options)
+              next = options.next
+              options.next = null
+              next.call(that, tag, options)
             } else {
               finishedLoad()
             }
           }
         }
       ) 
+    }
+    function loadInstagram(tag, options) {
+      if (!options) options = {};
+      var page = options['page'] || 1;
+      loadingNotice('Loading Instagram photos, page '+page+'...')
+      $.getJSON(
+        "https://api.instagram.com/v1/tags/"+tag+"/media/recent?callback=?",
+        {
+          client_id: '2d095c63a6a54bbab08e170725414095',
+          max_tag_id: options.max_tag_id
+        },
+        function(json) {
+          var photos = $(elt).data('photos') || [],
+              igPhotos = []
+          $.each(json.data, function(i, photo) {
+            var date = new Date(0)
+            date.setUTCSeconds(parseInt(photo.created_time))
+            igPhotos.push({
+              taken: date,
+              src: photo.images.standard_resolution.url,
+              url: photo.link,
+              width: photo.images.standard_resolution.width,
+              height: photo.images.standard_resolution.height,
+              title: photo.caption ? photo.caption.text : 'Untitled',
+              owner: photo.user.full_name + ' ('+photo.user.username+')',
+              provider: 'Instagram',
+              license: "All Rights Reserved",
+              object: photo
+            })
+          })
+          $(elt).data('photos', photos.concat(igPhotos))
+          if (json.pagination.next_max_tag_id) {
+            loadInstagram(tag, {max_tag_id: json.pagination.next_max_tag_id, page: page+1});
+          } else {
+            if (options.next) {
+              options.next.call(this, tag, options)
+            } else {
+              finishedLoad()
+            }
+          }
+        }
+      )
     }
   }
 })
