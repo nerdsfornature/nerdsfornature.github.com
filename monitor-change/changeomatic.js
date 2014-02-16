@@ -38,6 +38,9 @@ $(function() {
           pager: '#'+pager.attr('id'),
           pagerTemplate: "<a class='item' href=#>&nbsp;</a>"
         })
+        $('.photos', elt).bind('cycle-update-view', function() {
+          $(window).trigger('resize')
+        })
 
         if (options.tag) {
           $(elt).changeomatic('tag', options.tag)
@@ -58,6 +61,7 @@ $(function() {
         notice.html(msg)
       } else {
         notice.hide()
+        $(window).trigger('resize')
       }
     }
 
