@@ -46,21 +46,21 @@
 		<styleUrl>#msn_ylw-circle</styleUrl>
 		<Point>
 			<gx:drawOrder>1</gx:drawOrder>
-			<coordinates>-122.301934,37.545317</coordinates>
+			<coordinates>-122.302377,37.545171</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
 		<name>#makermonitor02</name>
 		<styleUrl>#msn_ylw-circle</styleUrl>
 		<Point>
-			<coordinates>-122.30116666666667,37.54416666666667</coordinates>
+			<coordinates>-122.30213,37.546803</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
 		<name>#makermonitor03</name>
 		<styleUrl>#msn_ylw-circle</styleUrl>
 		<Point>
-			<coordinates>-122.30233333333333,37.54683333333333</coordinates>
+			<coordinates>-122.301159,37.544233</coordinates>
 		</Point>
 	</Placemark>
 </Document>
