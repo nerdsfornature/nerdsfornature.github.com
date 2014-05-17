@@ -50,14 +50,14 @@
 		</Point>
 	</Placemark>
 	<Placemark>
-		<name>#makermonitor02</name>
+		<name>#makermonitor03</name>
 		<styleUrl>#msn_ylw-circle</styleUrl>
 		<Point>
 			<coordinates>-122.30213,37.546803</coordinates>
 		</Point>
 	</Placemark>
 	<Placemark>
-		<name>#makermonitor03</name>
+		<name>#makermonitor02</name>
 		<styleUrl>#msn_ylw-circle</styleUrl>
 		<Point>
 			<coordinates>-122.301159,37.544233</coordinates>
