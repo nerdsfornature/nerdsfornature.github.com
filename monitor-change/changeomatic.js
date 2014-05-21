@@ -42,6 +42,7 @@ $(function() {
           $(window).trigger('resize')
         })
 
+        $(elt).data('changeomatic-options', options)
         if (options.tag) {
           $(elt).changeomatic('tag', options.tag)
         }
@@ -66,12 +67,17 @@ $(function() {
     }
 
     function load() {
-      var tag = $(elt).data('tag')
+      var tag = $(elt).data('tag'),
+          options = $(elt).data('changeomatic-options') || {}
       if (!tag || tag.length == 0) { return }
       loadingNotice('Loading data...')
-      loadFlickr(tag, {next: loadInstagram})
-      // Note: twitter just isnt' going to work in the browser without some server-side proxy:
-      // http://stackoverflow.com/questions/17004070/making-jquery-ajax-call-to-twitter-api-1-1-search
+      if (options.googleSpreadsheetKey) {
+        loadGoogleSpreadsheet(tag, options)
+      } else {
+        loadFlickr(tag, {next: loadInstagram})
+        // Note: twitter just isnt' going to work in the browser without some server-side proxy:
+        // http://stackoverflow.com/questions/17004070/making-jquery-ajax-call-to-twitter-api-1-1-search
+      }
     }
 
     function finishedLoad() {
@@ -86,7 +92,7 @@ $(function() {
       $.each(photos, function() {
         var photo = this
         var img = $('<img />').attr('src', photo.src).data({
-          title: photo.title || 'unknown',
+          title: photo.title || '',
           owner: photo.owner || 'unknown',
           license: photo.license || "all rights reserved",
           provider: photo.provider || 'unknown',
@@ -100,6 +106,37 @@ $(function() {
       } else {
         loadingNotice(false)
       }
+    }
+
+    function loadGoogleSpreadsheet(tag, options) {
+      if (!options) options = {}
+      Tabletop.init({
+        key: options.googleSpreadsheetKey,
+        callback: function(data, tabletop) {
+          var photos = []
+          $.each(data, function(i, row) {
+            // provides us some control over which photos to use
+            if (tag != row.usabletag) return
+            var src = row.imageurl
+            if (row.provider == 'Flickr' && row.imageurlm) {
+              src = row.imageurlm
+            }
+            photos.push({
+              taken: $.format.parseDate(row.datetime).date,
+              src: src,
+              url: row.url,
+              owner: row.username,
+              provider: row.provider,
+              license: "all rights reserved",
+              object: row,
+              title: row.title
+            })
+          })
+          $(elt).data('photos', photos)
+          finishedLoad()
+        },
+        simpleSheet: true
+      })
     }
 
     function loadFlickr(tag, options) {
