@@ -47,6 +47,7 @@
   }
   $(document).ready(load_ui);
 
+  $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
   
   // call flickr api & append to bootstrap carousel
   function load_carousel (){
