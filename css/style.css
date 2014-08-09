@@ -320,3 +320,7 @@ h3.route-text:hover {
   }
 
 }
+
+.dropdown-backdrop {
+  position: static;
+}
