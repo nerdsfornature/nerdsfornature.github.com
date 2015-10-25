@@ -35,7 +35,7 @@ body {
 }
 
 /*#wrap > div.current {
-  display: block; 
+  display: block;
 }*/
 
 .container {
@@ -63,12 +63,12 @@ body {
   -webkit-border-radius: 110px;
   -moz-border-radius: 110px;
   border-radius: 110px;
-  
+
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  
+
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
   -o-background-clip: padding-box;
@@ -159,8 +159,8 @@ h3.route-text:hover {
 
 #myCarousel1 {
   display: block;
-  width: 870px;
-  height: 500px;
+  width: 100%;
+  /*height: 500px; */
   margin: 0px auto;
 }
 
@@ -177,7 +177,7 @@ h3.route-text:hover {
 
 #hero-carousel>.item>img {
   margin: 0 auto;
-} 
+}
 
 .carousel-inner {
   overflow: hidden;
@@ -200,8 +200,8 @@ h3.route-text:hover {
 
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -213,8 +213,8 @@ h3.route-text:hover {
 
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
@@ -288,7 +288,7 @@ h3.route-text:hover {
   .leaf-logo {
     display: none;
   }
-  
+
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -314,7 +314,7 @@ h3.route-text:hover {
 }
 
 @media (min-width: 1200px){
-  
+
   .thumbnails>li {
     margin-left: 15px !important;
   }

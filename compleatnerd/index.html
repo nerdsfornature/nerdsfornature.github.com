@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Nerds for Nature &middot; Well-rounded Nerd</title>
+    <title>Nerds for Nature &middot; The Compleat Nerd for Nature<nav>
+
+    </nav>ture</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -43,17 +45,18 @@
 
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="weare.html">We Are</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../weare.html">We Are</a></li>
+              <li><a href="../about.html">About</a></li>
               <li><a href="http://blog.nerdsfornature.org">Blog</a></li>
               <li class="dropdown">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Projects <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="/bioblitz">Bioblitz</a></li>
-                <li><a href="/monitor-change">Monitor Change</a></li>
-                <li><a href="/ecodrones">EcoDrones</a></li>
-              </ul>
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Projects <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../bioblitz">Bioblitz</a></li>
+                  <li><a class="active" href="../compleatnerd">Compleat Nerd</a></li>
+                  <li><a href="../monitor-change">Monitor Change</a></li>
+                </ul>
+             </li>
       	     <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Meetups <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -73,22 +76,70 @@
     <!-- ================================================== -->
     <div id="wrap">
 
-      <!-- survey page -->
+      <!-- compleat nerd page -->
       <div id="weare" class="load-wrap">
-
-        <div class="container-fluid">
-          <div class="container">
+        <div class="container">
             <div class="content-wrap">
-              <h2>What makes a well-rounded Nerd for Nature?</h2>
-              <p class="lead">insert copy that says what this is about</p>
-              <p>INSERT WORDCLOUD IMAGE</p>
-              <p><iframe src="https://docs.google.com/forms/d/1VUFAl56L2yGBuqiB8D8bJNCu_PBdmEJjiVXemgX_sps/viewform?embedded=true" width="760" height="850" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>
-              <p>What happens next...</p>
-            </div>
+            <section>
+            <div class="container">
+              <div class="row-fluid">
+              <div class="offset1 span4">
+              <h2>The Compleat Nerd for Nature</h2>
+                <p class="lead">What makes a well-rounded Nerd for Nature?</p>
+                <p>
+                  At our Nerds for Nature Summit in October 2015, we asked the assembled 50-some Nerds for Nature three questions: What skills do you have to offer? What skills do you want to learn? What projects do you want to see happen?
+                </p>
+                <p>
+                  These word clouds are derived from the answers. Or <a href="https://docs.google.com/spreadsheets/d/1k_t8G8-uBtmXZvifV876DpKrUBNubT12vCrneDbyCC8/edit#gid=422229510" target="_blank">see all the responses</a>.
+                </p>
+                <p class="lead">Then add your voice by filling out the survey below!</p>
+              </div>
+              <div class="span7">
+                  <!-- Carousel
+                  ================================================== -->
+
+                  <div id="myCarousel1" class="carousel slide">
+
+                    <!-- Carousel items -->
+                    <div id="hero-carousel" class="carousel-inner">
+
+                      <div class="item active">
+                        <img src="img/skills_have.png">
+                        <div class="carousel-caption">
+                          <p>Nerd Summit 2015: Skills Nerds have to offer</p>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="img/skills_wanted.png">
+                        <div class="carousel-caption">
+                          <p>Nerd Summit 2015: Skills Nerds want to learn</p>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="img/projects_wanted.png">
+                        <div class="carousel-caption">
+                          <p>Nerd Summit 2015: Projects Nerds want to do</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#myCarousel1" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel1" data-slide="next">&rsaquo;</a>
+                  </div><!-- #mycarousel -->
+
+                </div><!-- #hero-image-wrap -->
+            </div><!--top section-->
+          </section>
+          <div>
+              <iframe src="https://docs.google.com/forms/d/1VUFAl56L2yGBuqiB8D8bJNCu_PBdmEJjiVXemgX_sps/viewform?embedded=true" width="100%" height="850" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
           </div>
-        </div>
+      </div>
 
       </div> <!-- .load-wrap -->
+    </div>
       <!-- end survey page -->
 
       <div id="push"></div>
@@ -102,7 +153,7 @@
 
         <p class="muted credit">github: <a href="https://github.com/nerdsfornature">nerdsfornature</a>, Freenode: #nerds4nature</p>
 
-        <p class="muted credit">&copy; 2013 Nerds for Nature</p>
+        <p class="muted credit">&copy; 2015 Nerds for Nature</p>
       </div>
     </div>
     <!-- Le javascript
@@ -111,10 +162,10 @@
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-    <!-- <script src="js/handlebars.js"></script> -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/scripts.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery-1.7.1.min.js"><\/script>')</script>
+    <!-- <script src="../js/handlebars.js"></script> -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/scripts.js"></script>
 
     <script type="text/javascript">
 
