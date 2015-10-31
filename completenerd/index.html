@@ -14,6 +14,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/magnific-popup.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -104,21 +105,21 @@
                     <div id="hero-carousel" class="carousel-inner">
 
                       <div class="item active">
-                        <img src="img/skills_have.png">
+                        <a href="img/skills_have_large.png" class="image-popup-vertical-fit" title="Skills Nerds Have"><img src="img/skills_have.png"></a>
                         <div class="carousel-caption">
-                          <p>Nerd Summit 2015: Skills Nerds have to offer</p>
+                          <p>Nerd Summit 2015: Skills Nerds have to offer.</p>
                         </div>
                       </div>
 
                       <div class="item">
-                        <img src="img/skills_wanted.png">
+                        <a href="img/skills_wanted_large.png" class="image-popup-vertical-fit" title="Skills Nerds Want"><img src="img/skills_wanted.png"></a>
                         <div class="carousel-caption">
                           <p>Nerd Summit 2015: Skills Nerds want to learn</p>
                         </div>
                       </div>
 
                       <div class="item">
-                        <img src="img/projects_wanted.png">
+                        <a href="img/projects_wanted_large.png" class="image-popup-vertical-fit" title="Projects Nerds Want to See"><img src="img/projects_wanted.png"></a>
                         <div class="carousel-caption">
                           <p>Nerd Summit 2015: Projects Nerds want to do</p>
                         </div>
@@ -135,7 +136,7 @@
           </section>
           <div>
               <iframe src="https://docs.google.com/forms/d/1VUFAl56L2yGBuqiB8D8bJNCu_PBdmEJjiVXemgX_sps/viewform?embedded=true" width="100%" height="1050" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-              <small>What's with the spelling of "complete" anyway? h/t to <a href="https://en.wikipedia.org/wiki/Izaak_Walton#The_Complete_Angler" target="_blank">Izaak Walton</a>.</small>
+              <small>What's with the whole "complete" thing anyway? h/t to <a href="https://en.wikipedia.org/wiki/Izaak_Walton#The_Complete_Angler" target="_blank">Izaak Walton</a>.</small>
           </div>
       </div>
 
@@ -167,7 +168,46 @@
     <!-- <script src="../js/handlebars.js"></script> -->
     <script src="../js/bootstrap.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.magnific-popup.js"></script>
+    <!-- from http://dimsemenov.com/plugins/magnific-popup/ -->
+    <script type="text/javascript">
+            $(document).ready(function() {
 
+        	$('.image-popup-vertical-fit').magnificPopup({
+        		type: 'image',
+        		closeOnContentClick: true,
+        		mainClass: 'mfp-img-mobile',
+        		image: {
+        			verticalFit: true
+        		}
+
+        	});
+
+        	$('.image-popup-fit-width').magnificPopup({
+        		type: 'image',
+        		closeOnContentClick: true,
+        		image: {
+        			verticalFit: false
+        		}
+        	});
+
+        	$('.image-popup-no-margins').magnificPopup({
+        		type: 'image',
+        		closeOnContentClick: true,
+        		closeBtnInside: false,
+        		fixedContentPos: true,
+        		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+        		image: {
+        			verticalFit: true
+        		},
+        		zoom: {
+        			enabled: true,
+        			duration: 300 // don't foget to change the duration also in CSS
+        		}
+        	});
+
+        });
+    </script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
