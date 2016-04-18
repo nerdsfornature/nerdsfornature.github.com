@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lilita+One);
+
 @font-face {
   font-family: 'Bariol';
   src: url('../fonts/Bariol/Bariol_Regular.otf') format('opentype');
@@ -55,8 +57,7 @@ body {
   width: 144px;
   height: 144px;
   z-index: 1;
-
-  background-color: black;
+  background-color: #dde24a;
   text-align: center;
   border: none;
 
@@ -77,13 +78,13 @@ body {
 
 .route-text {
   top:30px;
-  font-family: "Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lilita One","Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   display: block;
-  color: white;
-  font-size: 18px;
+  color: #1a8040;
+  font-size: 22px;
   letter-spacing: 2px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 #ball1.route a h3.route-text {
@@ -103,7 +104,8 @@ h3.route-text:hover {
 }
 
 #hero-title {
-  font-family: "Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lilita One","Bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1a8040;
   display: inline-block;
 }
 
@@ -144,8 +146,19 @@ h3.route-text:hover {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
+.navbar-inner  .navbar-inner.container {
+  background-color: #1a8040; /* background color will be black for all browsers */
+  background-image: none !important;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+
 /* Navbar links: increase padding for taller navbar */
-.navbar-static-top .nav > li > a { padding: 15px 20px; }
+.navbar-static-top .nav > li > a { 
+  padding: 15px 20px; 
+  color: #ffffff;
+}
 
 .navbar-static-top .nav {
   float: right;
