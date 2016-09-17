@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="mclarenposts" id="mclarenposts">
+	<SimpleField name="cartodb_id" type="int"></SimpleField>
+	<SimpleField name="lng" type="float"></SimpleField>
+	<SimpleField name="lat" type="float"></SimpleField>
+	<SimpleField name="title" type="string"></SimpleField>
+	<SimpleField name="main_img" type="string"></SimpleField>
+	<SimpleField name="post_img" type="string"></SimpleField>
+</Schema>
+<Folder><name>mclarenposts</name>
+  <Placemark>
+	<description>attach to guard rail</description>
+	<ExtendedData><SchemaData schemaUrl="#mclarenposts">
+		<SimpleData name="cartodb_id">1</SimpleData>
+		<SimpleData name="lng">-122.41258</SimpleData>
+		<SimpleData name="lat">37.718135</SimpleData>
+		<SimpleData name="title">Mandela overlook lot</SimpleData>
+		<SimpleData name="main_img">https://dl.dropboxusercontent.com/u/15106346/nerdsfornature/mclaren/MandelaOverlook.jpg</SimpleData>
+		<SimpleData name="post_img">https://dl.dropboxusercontent.com/u/15106346/nerdsfornature/mclaren/MandelaOverlook-post.jpg</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.41258,37.718135</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>attach to fence post</description>
+	<ExtendedData><SchemaData schemaUrl="#mclarenposts">
+		<SimpleData name="cartodb_id">2</SimpleData>
+		<SimpleData name="lng">-122.418557</SimpleData>
+		<SimpleData name="lat">37.71921</SimpleData>
+		<SimpleData name="title">Meadow view</SimpleData>
+		<SimpleData name="main_img">https://dl.dropboxusercontent.com/u/15106346/nerdsfornature/mclaren/Meadowview-target.jpg</SimpleData>
+		<SimpleData name="post_img">https://dl.dropboxusercontent.com/u/15106346/nerdsfornature/mclaren/Meadowview-post.jpg</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-122.418557,37.71921</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
