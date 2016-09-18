@@ -11,7 +11,7 @@
 </Schema>
 <Folder><name>mclarenposts</name>
   <Placemark>
-	<description>attach to guard rail</description>
+	<description>#mclarenSF2</description>
 	<ExtendedData><SchemaData schemaUrl="#mclarenposts">
 		<SimpleData name="cartodb_id">1</SimpleData>
 		<SimpleData name="lng">-122.41258</SimpleData>
@@ -23,7 +23,7 @@
       <Point><coordinates>-122.41258,37.718135</coordinates></Point>
   </Placemark>
   <Placemark>
-	<description>attach to fence post</description>
+	<description>#mclarenSF1</description>
 	<ExtendedData><SchemaData schemaUrl="#mclarenposts">
 		<SimpleData name="cartodb_id">2</SimpleData>
 		<SimpleData name="lng">-122.418557</SimpleData>
