@@ -182,8 +182,8 @@
               <div class="row-fluid">
                 <ul id="tagnav" class="nav nav-tabs">
                   <li class="active"><a href="#mclarenintro" data-toggle="tab">Intro</a></li>
-                  <li><a href="#mclarensf1" data-toggle="tab">#mclarensf1</a></li>
-                  <li><a href="#mclarensf2" data-toggle="tab">#mclarensf2</a></li>
+                  <li><a href="#mclarenSF1" data-toggle="tab">#mclarenSF1</a></li>
+                  <li><a href="#mclarenSF2" data-toggle="tab">#mclarenSF2</a></li>
                 </ul>
                 <div class="tab-content">
                   <div id="mclarenintro" class="tab-pane fade in active">
@@ -210,9 +210,9 @@
                     </div>
                   </div>
 
-                  <div id="mclarensf1" class="tab-pane fade"><div class="changeomatic"></div></div>
+                  <div id="mclarenSF1" class="tab-pane fade"><div class="changeomatic"></div></div>
 
-                  <div id="mclarensf2" class="tab-pane fade"><div class="changeomatic"></div></div>
+                  <div id="mclarenSF2" class="tab-pane fade"><div class="changeomatic"></div></div>
                 </div>
               </div>
 
@@ -281,7 +281,7 @@
           var elt = $($(this).attr('href') + ' .changeomatic')
           if (elt.hasClass('changeomatic-set')) return
           var tag = $(this).attr('href').replace('#', '')
-          if (tag == 'mclarensf') {
+          if (tag == 'mclarenSF') {
             elt.changeomatic({tag: tag})
           } else {
             elt.changeomatic({
